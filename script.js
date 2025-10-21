@@ -4,7 +4,7 @@ let warning = document.getElementById("warning");
 let loadingBarContainer = document.getElementById("loadingBarContainer");
 
 let MAX_CHARS = 200;
-let PIXELS = 50; // number of pixel blocks
+let PIXELS = 50;
 
 // Create pixel blocks dynamically
 for (let i = 0; i < PIXELS; i++) {
@@ -26,10 +26,8 @@ textArea.addEventListener("input", () => {
     warning.textContent = "";
   }
 
-  // Update counter
   counter.textContent = `${textLength}/${MAX_CHARS} characters`;
 
-  // Fill pixel blocks based on character count
   let filledPixels = Math.round((textLength / MAX_CHARS) * PIXELS);
   pixels.forEach((pixel, index) => {
     if (index < filledPixels) {
