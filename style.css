@@ -1,9 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Courier New", monospace;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background: #0d1117;
   color: #c9d1d9;
   margin: 0;
@@ -11,10 +15,10 @@ body {
 }
 
 .container {
-  width: 70%;
+  width: 100%;
   max-width: 600px;
   background: #161b22;
-  padding: 5%;
+  padding: 30px 25px;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   display: flex;
@@ -25,15 +29,15 @@ body {
 .title {
   text-align: center;
   font-size: 1.8rem;
-  margin-bottom: 15px;
-  color: #00ffff;
+  margin-bottom: 20px;
+  color: #b6f4f4;
   letter-spacing: 1px;
 }
 
 textarea {
   width: 100%;
-  height: 120px;
-  padding: 10px;
+  height: 130px;
+  padding: 12px;
   font-size: 16px;
   border-radius: 8px;
   border: 1px solid #30363d;
@@ -41,11 +45,14 @@ textarea {
   color: #c9d1d9;
   resize: none;
   outline: none;
+  display: block;
 }
 
 .counter {
   margin-top: 10px;
   font-size: 14px;
+  text-align: right; /* ✅ aligns counter text neatly */
+  color: #8b949e;
 }
 
 .warning {
@@ -80,7 +87,6 @@ textarea {
 /* ✅ Mobile Responsive */
 @media (max-width: 600px) {
   .container {
-    width: 100%;
     padding: 20px;
   }
 
