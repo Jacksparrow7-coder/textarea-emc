@@ -3,17 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Text area box</title>
+<title>Feedback</title>
 <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 <script src="script.js" defer></script>
 </head>
 <body>
   <div class="container">
-    <h1 class="title">Text Area Box</h1>
+    <h1 class="title">Feedback Box</h1>
+    
     <textarea id="textArea" placeholder="Type your text here..."></textarea>
     <div class="counter" id="counter">0/200 characters</div>
     <div class="loading-bar-container" id="loadingBarContainer"></div>
     <div class="warning" id="warning"></div>
+
+    <!-- ✅ Send Button -->
+    <button id="sendBtn" class="send-btn">Send</button>
   </div>
 </body>
 </html>

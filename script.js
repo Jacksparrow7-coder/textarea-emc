@@ -2,6 +2,7 @@ let textArea = document.getElementById("textArea");
 let counter = document.getElementById("counter");
 let warning = document.getElementById("warning");
 let loadingBarContainer = document.getElementById("loadingBarContainer");
+let sendBtn = document.getElementById("sendBtn");
 
 let MAX_CHARS = 200;
 let PIXELS = 50;
@@ -30,10 +31,19 @@ textArea.addEventListener("input", () => {
 
   let filledPixels = Math.round((textLength / MAX_CHARS) * PIXELS);
   pixels.forEach((pixel, index) => {
-    if (index < filledPixels) {
-      pixel.classList.add("filled");
-    } else {
-      pixel.classList.remove("filled");
-    }
+    pixel.classList.toggle("filled", index < filledPixels);
   });
+});
+
+// ✅ Send button alert
+sendBtn.addEventListener("click", () => {
+  let message = textArea.value.trim();
+  if (message === "") {
+    alert("Please type something before sending 🚀");
+  } else {
+    alert(`Message sent successfully! ✅\n\nYour text:\n"${message}"`);
+    textArea.value = "";
+    counter.textContent = `0/${MAX_CHARS} characters`;
+    pixels.forEach(pixel => pixel.classList.remove("filled"));
+  }
 });

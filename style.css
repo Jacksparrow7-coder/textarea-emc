@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: "Courier New", monospace;
+  font-family: "poppins", monospace;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,7 @@ body {
   text-align: center;
   font-size: 1.8rem;
   margin-bottom: 20px;
-  color: #b6f4f4;
+  color: #00ffff;
   letter-spacing: 1px;
 }
 
@@ -48,10 +48,13 @@ textarea {
   display: block;
 }
 
+textarea::placeholder {
+  font-family: "poppins", monospace;
+}
 .counter {
   margin-top: 10px;
   font-size: 14px;
-  text-align: right; /* ✅ aligns counter text neatly */
+  text-align: right;
   color: #8b949e;
 }
 
@@ -82,6 +85,25 @@ textarea {
 
 .pixel.filled {
   background-color: #0ff;
+}
+
+/* ✅ Send Button Styling */
+.send-btn {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: linear-gradient(90deg, #00ffff, #0077ff);
+  border: none;
+  color: #0d1117;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.send-btn:hover {
+  background: linear-gradient(90deg, #00ccff, #0055ff);
+  transform: scale(1.05);
 }
 
 /* ✅ Mobile Responsive */
